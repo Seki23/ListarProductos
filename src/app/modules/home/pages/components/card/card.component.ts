@@ -9,7 +9,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class CardComponent implements OnInit {
   @Input () obj!:ICategoria;
-  image:string='';
+
   
   @Output() Event=new EventEmitter<string>();
   constructor(private sanitizer: DomSanitizer) { 

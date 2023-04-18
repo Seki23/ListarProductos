@@ -1,8 +1,8 @@
-<div class="col-4">
-    <div class="card"><img id="card" [src]=getSantizeUrl(obj.catImagen) class="card-img-top" alt="...">
+
+    <div class="card" >
+        <img id="card" src="{{ 'data:image/jpeg;base64,' + obj.catImagen }}" class="card-img-top img-fluid" alt="...">
         <div class="card-body">
             <h5 class="card-title text-center">{{obj.catNombre}}</h5>
-            <a  (click)="filtrar(obj.catId)" class="btn btn-primary form-control">Ver Menú</a>
+            <a  [routerLink]="['listar/',obj.catId]" class="btn btn-primary form-control">Ver Menú</a>
         </div>
     </div>
-</div>

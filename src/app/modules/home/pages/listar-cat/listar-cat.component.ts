@@ -10,8 +10,7 @@ import { IProducto } from '../interface/producto.interface';
 })
 export class ListarCatComponent implements OnInit {
   categorias:ICategoria[]=[];
-  productos:IProducto[]=[];
-  parametro:string='';
+
   constructor(private listarService:ListarCatService) { }
 
   ngOnInit(): void {
@@ -25,14 +24,6 @@ export class ListarCatComponent implements OnInit {
        });
   }
 
-  filtrar(parametro:string){
-    this.parametro=parametro;
-    this.listarService.getProductosByCat(parametro).subscribe((resp)=>{
-      this.productos=resp;
-      console.log(this.productos);
-      
-    })
-    
-  }
+ 
 
 }
